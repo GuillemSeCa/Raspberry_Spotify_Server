@@ -13,7 +13,7 @@ crontab -l > $HOME/mycron.txt
 echo "$cron" >> $HOME/mycron.txt
 #install new cron file
 crontab $HOME/mycron.txt
-rm $HOME/mycron.txt
+
 
 
 echo -e '	<!DOCTYPE html><html>
