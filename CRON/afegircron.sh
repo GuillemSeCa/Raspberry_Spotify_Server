@@ -16,7 +16,7 @@ crontab $HOME/mycron.txt
 rm $HOME/mycron.txt
 
 
-echo -e'	<!DOCTYPE html><html>
+echo -e '	<!DOCTYPE html><html>
 		<body>
 			<h1>AFEGIR CRON</h1>
 			<p>Cron afegit.</p>
