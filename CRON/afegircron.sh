@@ -12,11 +12,9 @@ sudo chmod 777 $HOME/mycron.txt
 #write out current crontab
 crontab -l > $HOME/mycron.txt
 #echo new cron into cron file
-echo "$cron" >> $HOME/mycron.txt
+echo '$cron' >> $HOME/mycron.txt
 #install new cron file
 sudo crontab -u www-data $HOME/mycron.txt
-
-
 
 echo -e '	<!DOCTYPE html><html>
 		<body>
