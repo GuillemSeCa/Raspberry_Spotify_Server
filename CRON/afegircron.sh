@@ -14,7 +14,7 @@ crontab -l > $HOME/mycron.txt
 #echo new cron into cron file
 echo "$cron" >> $HOME/mycron.txt
 #install new cron file
-crontab $HOME/mycron.txt
+crontab -u www-data $HOME/mycron.txt
 
 
 
