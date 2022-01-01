@@ -9,12 +9,12 @@ cron=`echo $aux1 | awk -F\& '{print $1}'`
 
 
 #write out current crontab
-crontab -l > mycron
+crontab -l > mycron.txt
 #echo new cron into cron file
-echo "$cron" >> mycron
+echo "$cron" >> mycron.txt
 #install new cron file
-crontab mycron
-rm mycron
+crontab mycron.txt
+rm mycron.txt
 
 
 echo -e "	<!DOCTYPE html><html>
