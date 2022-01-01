@@ -12,7 +12,7 @@ sudo chmod 777 $HOME/mycron.txt
 #write out current crontab
 crontab -l > $HOME/mycron.txt
 #echo new cron into cron file
-echo '$cron' >> $HOME/mycron.txt
+echo '\n$cron' >> $HOME/mycron.txt
 #install new cron file
 crontab $HOME/mycron.txt
 
