@@ -6,6 +6,7 @@ echo
 aux1=`echo $QUERY_STRING | awk -F= '{print $2}'`
 cron=`echo $aux1 | awk -F\& '{print $1}'`
 
+sudo touch $HOME/mycron.txt
 
 #write out current crontab
 crontab -l > $HOME/mycron.txt
