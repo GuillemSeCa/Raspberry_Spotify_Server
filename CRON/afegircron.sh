@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Content-Type: text/html
-
+echo 
 #@TODO
 
 aux1=`echo $QUERY_STRING | awk -F= '{print $2}'`
@@ -16,7 +16,7 @@ crontab $HOME/mycron.txt
 rm $HOME/mycron.txt
 
 
-echo -e "	<!DOCTYPE html><html>
+echo -e'	<!DOCTYPE html><html>
 		<body>
 			<h1>AFEGIR CRON</h1>
 			<p>Cron afegit.</p>
@@ -25,4 +25,4 @@ echo -e "	<!DOCTYPE html><html>
                 <input type="submit" value="Return">
             </form>
 		</body>
-		</html>"
+		</html>'
