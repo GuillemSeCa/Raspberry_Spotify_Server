@@ -9,6 +9,7 @@ name=`echo $aux1 | awk -F\& '{print $1}'`
 
 if [ `id -u $name 2>/dev/null || echo -1` -ge 0 ];
 then
+	echo "SYS_LOGS: Usuari $name eliminat del sistema." >> $HOME/logs.txt
 	echo -e "	<h1>REMOVE USER</h1>
 				<p>Removed successful</p>
 				<form action="../webapp.sh">
@@ -17,6 +18,7 @@ then
 				sudo userdel $name
 				sudo rm -rf /home/$name
 else
+	echo "SYS_LOGS: Intent d'eliminar usuari $name ($try)." >> $HOME/logs.txt
 	echo -e "	<h1>REMOVE USER</h1>
 				<p>User doesn't exist.</p>
 				<form action="../webapp.sh">
