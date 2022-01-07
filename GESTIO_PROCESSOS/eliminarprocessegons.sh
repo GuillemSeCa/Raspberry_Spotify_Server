@@ -13,6 +13,7 @@ echo -e "	<!DOCTYPE html><html>
 			if [ -n "$(ps -p $pid -o pid=)" ];
 			then
 				echo -e "<p>Process with PID $pid will be killed in $seconds seconds.</p>
+				echo "SYS_LOGS: Kill PID $pid en $seconds segons." >> $HOME/logs.txt
 						<form action="../webapp.sh">
 								<input type="submit" value="Return">
 						</form>
@@ -21,6 +22,7 @@ echo -e "	<!DOCTYPE html><html>
 				nohup bash killInSeconds.sh $seconds $pid > /dev/null 2>&1 & disown
 		    else
 				echo -e "<p>Process with PID $pid is not running.</p>
+				echo "SYS_LOGS: Intent de Kill PID $pid." >> $HOME/logs.txt
 						 <form action="../webapp.sh">
 								<input type="submit" value="Return">
 						</form>
