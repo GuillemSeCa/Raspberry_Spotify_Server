@@ -1,7 +1,7 @@
 #!/bin/bash
 echo Content-Type: text/html
 echo
-echo "SYS_LOGS: S'ha apagat el sistema." >> $HOME/logs.txt
+echo "SYS_LOGS: S'ha apagat el sistema." >> /home/pi/Desktop/logs.txt
 echo -e "	<!DOCTYPE html><html>
 		<body>
 			<p>Apagando...</p>
