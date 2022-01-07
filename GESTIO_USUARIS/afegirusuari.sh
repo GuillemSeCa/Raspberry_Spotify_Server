@@ -11,14 +11,14 @@ try=$(sudo useradd -m $name -p $password 2>&1)
 
 if [ -z $try ];
 then
-	echo "SYS_LOGS: Usuari $name afegit al sistema." >> $HOME/logs.txt
+	echo "SYS_LOGS: Usuari $name afegit al sistema." >> /home/pi/Desktop/logs.txt
 	echo -e "	<h1>AFEGIR USUARI</h1>
 				<p>Add user successful</p>
 				<form action="../webapp.sh">
 					<input type="submit" value="Return">
 				</form>"
 else
-	echo "SYS_LOGS: Intent de registre d'usuari ($try)." >> $HOME/logs.txt
+	echo "SYS_LOGS: Intent de registre d'usuari ($try)." >> /home/pi/Desktop/logs.txt
 	echo -e "	<h1>AFEGIR USUARI</h1>
 				<p>$try</p>
 				<form action="../webapp.sh">
