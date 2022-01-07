@@ -7,7 +7,7 @@ users=`echo "$(cut -d: -f1 /etc/passwd)"`
 echo -e "	<!DOCTYPE html><html>
 		<body>
 			<h1>SHOW ALL USERS</h1>"
-		echo "SYS_LOGS: S'han mostrat tots els usuaris del sistema." >> $HOME/logs.txt
+		echo "SYS_LOGS: S'han mostrat tots els usuaris del sistema." >> /home/pi/Desktop/logs.txt
 			while IFS="" read -r -a line;
 			do
 				echo "<p>$line</p>";
