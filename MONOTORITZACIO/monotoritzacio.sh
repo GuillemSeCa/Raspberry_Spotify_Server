@@ -17,6 +17,8 @@ echo -e "	<!DOCTYPE html><html>
             <p>$diskusage</p>
             <p>$uptime</p></br>
             <p>Last 10 logs on server:</p>"
+	    
+	    echo "SYS_LOGS: S'ha consultat la monotoritzacio del sistema." >> $HOME/logs.txt
 
             while IFS="" read -r -a line;
 			do
