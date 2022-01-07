@@ -2,12 +2,25 @@
 
 sudo apt install raspberrypi-kernel-headers
 
-if [ -d "code" ]; then
-    cd code && make clean && make && sudo insmod LKM.ko && cp A.sh /home/pi/A.sh && cp B.sh /home/pi/B.sh && cp C.sh /home/pi/C.sh && cp D.sh /home/pi/D.sh && chmod +x /home/pi/A.sh /home/pi/B.sh /home/pi/C.sh /home/pi/D.sh && cd ..
-fi
-echo "$(pwd)"
-if [ ! -d "code" ]; then
-    echo "As the git repo doesn't exist already we clone it!"
-    sudo apt-get -y install git && git clone https://github.com/GuillemSeCa/Linux_LKM.git
-    cd Linux_LKM/code && make clean && make && sudo insmod LKM.ko && cp A.sh /home/pi/A.sh && cp B.sh /home/pi/B.sh && cp C.sh /home/pi/C.sh && cp D.sh /home/pi/D.sh && chmod +x /home/pi/A.sh /home/pi/B.sh /home/pi/C.sh /home/pi/D.sh
-fi
+sudo apt update
+sudo apt upgrade
+
+#TODO: demana el 'Y'
+sudo apt install apache2
+sudo apt-get install xrdp
+sudo a2enmod cgid
+sudo systemctl restart apache2
+
+#TODO: Instalem git per crear els scripts al lloc corresponent
+sudo apt-get install git
+git clone https://github.com/GuillemSeCa/Raspberry_Spotify_Server $HOME/Desktop
+cd $HOME/Desktop && git checkout dev
+
+cd $HOME/Desktop/code && make && sudo insmod LKM.ko && cp A.sh /home/pi/A.sh && cp B.sh /home/pi/B.sh && cp C.sh /home/pi/C.sh && cp D.sh /home/pi/D.sh && chmod +x /home/pi/A.sh /home/pi/B.sh /home/pi/C.sh /home/pi/D.sh
+
+sudo cp -r $HOME/Desktop/* /usr/lib/cgi-bin
+
+sudo chmod -R 755 /usr/lib/cgi-bin
+echo 'www-data ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
+
+
