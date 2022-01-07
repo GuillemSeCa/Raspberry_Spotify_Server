@@ -6,7 +6,7 @@ aux1=`echo $QUERY_STRING | awk -F= '{print $2}'`
 pid=`echo $aux1 | awk -F\& '{print $1}'`
 status=`echo "$(ps -q $pid -o state --no-headers)"`
 
-echo "SYS_LOGS: S'ha consultat el estat del process PID $pid." >> $HOME/logs.txt
+echo "SYS_LOGS: S'ha consultat el estat del process PID $pid." >> /home/pi/Desktop/logs.txt
 echo -e "	<!DOCTYPE html><html>
 			<head><meta http-equiv="Content-Type" content="text/html\; charset=UTF-8" /></head><body>
 			<h1>ESTAT DEL PROCES</h1>
