@@ -11,12 +11,14 @@ try=$(sudo useradd -m $name -p $password 2>&1)
 
 if [ -z $try ];
 then
+	echo "SYS_LOGS: S'ha fet un signup correcte al sistema." >> $HOME/logs.txt
 	echo -e "	<h1>SIGNUP OK</h1>
 				<p>Signup successful</p>
 				<form action="../index.sh">
 					<input type="submit" value="Return">
 				</form>"
 else
+	echo "SYS_LOGS: S'ha fet un signup incorrecte al sistema." >> $HOME/logs.txt
 	echo -e "	<h1>SIGNUP FAILED</h1>
 				<p>$try</p>
 				<form action="../index.sh">
