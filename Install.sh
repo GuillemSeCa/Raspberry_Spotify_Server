@@ -7,6 +7,10 @@ sudo apt upgrade
 
 #TODO: demana el 'Y'
 sudo apt install apache2
+
+
+
+
 sudo apt-get install xrdp
 sudo a2enmod cgid
 sudo systemctl restart apache2
@@ -22,5 +26,9 @@ sudo cp -r $HOME/Desktop/* /usr/lib/cgi-bin
 
 sudo chmod -R 755 /usr/lib/cgi-bin
 echo 'www-data ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
+
+#Per transofrmar \n s de Windows a format Unix
+sudo apt-get install dos2unix
+cd /usr/lib/gci-bin && sudo find . -type f -print0 | sudo  xargs -0 dos2unix
 
 
