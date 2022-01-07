@@ -32,7 +32,7 @@ cd /usr/lib/gci-bin && sudo find . -type f -print0 | sudo  xargs -0 dos2unix
 sudo apt-get install mpg123
 
 touch $HOME/logs.txt
-sudo chmod 755 $HOME/logs.txt
+sudo chmod 755 /home/pi/Desktop/logs.txt
 sudo systemctl restart apache2
 
 
