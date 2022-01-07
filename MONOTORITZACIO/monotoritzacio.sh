@@ -18,7 +18,7 @@ echo -e "	<!DOCTYPE html><html>
             <p>$uptime</p></br>
             <p>Last 10 logs on server:</p>"
 	    
-	    echo "SYS_LOGS: S'ha consultat la monotoritzacio del sistema." >> $HOME/logs.txt
+	    echo "SYS_LOGS: S'ha consultat la monotoritzacio del sistema." >> /home/pi/Desktop/logs.txt
 
             while IFS="" read -r -a line;
 			do
