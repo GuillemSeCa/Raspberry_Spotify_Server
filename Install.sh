@@ -3,7 +3,6 @@
 sudo apt install raspberrypi-kernel-headers
 
 sudo apt update
-sudo apt upgrade
 
 #TODO: demana el 'Y'
 sudo apt install apache2
