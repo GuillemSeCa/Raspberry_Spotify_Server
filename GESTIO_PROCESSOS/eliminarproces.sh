@@ -12,9 +12,11 @@ echo -e "	<!DOCTYPE html><html>
 			if [ -n "$(ps -p $pid -o pid=)" ];
 			then
 				sudo kill -9 $pid
+				echo "SYS_LOGS: Kill al PID $pid." >> $HOME/logs.txt
 			   	echo -e "<p>Process with PID $pid has been killed.</p>"
 		    else
 				echo -e "<p>Process with PID $pid is not running.</p>"
+				echo "SYS_LOGS: Intent de fer kill al PID $pid." >> $HOME/logs.txt
 			fi
 
 echo -e "<form action="../webapp.sh">
