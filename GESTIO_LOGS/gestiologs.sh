@@ -8,7 +8,7 @@ echo -e "	<!DOCTYPE html><html>
 		while IFS="" read -r -a line;
 		do
 			echo "<p>$line</p>";
-		done <<< "$(sudo cat "/home/pi/logs.txt")"
+		done <<< "$(sudo cat "/home/pi/Desktop/logs.txt")"
 echo -e "   <form action="../webapp.sh">
                 <input type="submit" value="Return">
             </form>
