@@ -13,14 +13,14 @@ if [ `id -u $name 2>/dev/null || echo -1` -ge 0 ];
 then
 	if [ "$password" = "$pass2" ];
 	then
-		echo "SYS_LOGS: Usuari $name ha fet login al sistema." >> $HOME/logs.txt
+		echo "SYS_LOGS: Usuari $name ha fet login al sistema." >> /home/pi/Desktop/logs.txt
 		echo -e "	<h1>LOGIN OK</h1>
 					<p>LOGIN successful</p>
 					<form action="../webapp.sh">
 						<input type="submit" value="Continue">
 					</form>"
 	else
-		echo "SYS_LOGS: Intent de login al sistema amb nom: $name. Contrasenya fallida." >> $HOME/logs.txt
+		echo "SYS_LOGS: Intent de login al sistema amb nom: $name. Contrasenya fallida." >> /home/pi/Desktop/logs.txt
 		echo -e "	<h1>LOGIN FAILED</h1>
 					<p>Doesn't match password.</p>
 					<form action="../index.sh">
@@ -28,7 +28,7 @@ then
 					</form>"
 	fi
 else
-	echo "SYS_LOGS: Intent de login al sistema amb nom: $name. Usuari no registrat." >> $HOME/logs.txt
+	echo "SYS_LOGS: Intent de login al sistema amb nom: $name. Usuari no registrat." >> /home/pi/Desktop/logs.txt
 	echo -e "	<h1>LOGIN FAILED</h1>
 				<p>User doesn't exist.</p>
 				<form action="../index.sh">
