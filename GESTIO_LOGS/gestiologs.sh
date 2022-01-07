@@ -1,9 +1,6 @@
 #!/bin/bash
 echo Content-Type: text/html
 echo
-
-#@TODO
-
 echo -e "	<!DOCTYPE html><html>
 		<body>
 			<h1>GESTIO DE LOGS</h1>"
