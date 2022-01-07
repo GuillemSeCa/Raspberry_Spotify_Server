@@ -31,4 +31,9 @@ echo 'www-data ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
 sudo apt-get install dos2unix
 cd /usr/lib/gci-bin && sudo find . -type f -print0 | sudo  xargs -0 dos2unix
 
+#Instalem el mpg123
+sudo apt-get install mpg123
+
+touch $HOME/logs.txt
+
 
