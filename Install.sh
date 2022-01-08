@@ -25,7 +25,7 @@ echo 'www-data ALL=(ALL) NOPASSWD: ALL' | sudo EDITOR='tee -a' visudo
 
 #Per transofrmar \n s de Windows a format Unix
 sudo apt-get install dos2unix
-cd /usr/lib/gci-bin && sudo find . -type f -print0 | sudo  xargs -0 dos2unix
+cd /usr/lib/cgi-bin && sudo find . -type f -print0 | sudo  xargs -0 dos2unix
 
 #Instalem el mpg123
 sudo apt-get install mpg123
