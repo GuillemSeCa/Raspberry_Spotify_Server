@@ -6,15 +6,15 @@ echo
 aux1=`echo $QUERY_STRING | awk -F= '{print $2}'`
 cron=`echo $aux1 | awk -F\& '{print $1}'`
 
-sudo touch $HOME/mycron.txt
-sudo chmod 777 $HOME/mycron.txt
+sudo touch /home/pi/mycron.txt
+sudo chmod 777 /home/pi/mycron.txt
 
 #write out current crontab
-crontab -l > $HOME/mycron.txt
+crontab -l > /home/pi/mycron.txt
 #echo new cron into cron file
-echo '\n$cron' >> $HOME/mycron.txt
+echo "$(cron)" >> /home/pi/mycron.txt
 #install new cron file
-cat $HOME/mycron.txt | crontab -e -
+cat /home/pi/mycron.txt | sudo crontab -u www-data -
 
 echo -e '	<!DOCTYPE html><html>
 		<body>
