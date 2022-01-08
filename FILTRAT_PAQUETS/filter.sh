@@ -14,30 +14,30 @@ port=`echo $QUERY_STRING | awk -F\= '{print $5}'`
 
 if [ -z "$prot" ];
 then
-	protT="-p $(prot)"
-else
 	protT=""
+else
+	protT="-p $(prot)"
 fi
 
 if [ -z "$src" ];
 then
-	srcT="-s $(src)"
-else
 	srcT=""
+else
+	srcT="-s $(src)"
 fi
 
 if [ -z "$dest" ];
 then
-	destT="-d $(dest)"
-else
 	destT=""
+else
+	destT="-d $(dest)"
 fi
 
 if [ -z "$port" ];
 then
-	portT="--dport $(port)"
-else
 	portT=""
+else
+	portT="--dport $(port)"
 fi
 
 iptable="$(protT) $(srcT) $(destT) $(portT)"
