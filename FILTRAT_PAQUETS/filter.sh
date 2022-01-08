@@ -14,28 +14,28 @@ port=`echo $QUERY_STRING | awk -F\= '{print $5}'`
 
 if [ -z "$prot" ];
 then
-	protT="-p $prot"
+	protT="-p $(prot)"
 else
 	protT=""
 fi
 
 if [ -z "$src" ];
 then
-	srcT="-s $src"
+	srcT="-s $(src)"
 else
 	srcT=""
 fi
 
 if [ -z "$dest" ];
 then
-	destT="-d $dest"
+	destT="-d $(dest)"
 else
 	destT=""
 fi
 
 if [ -z "$port" ];
 then
-	portT="--dport $port"
+	portT="--dport $(port)"
 else
 	portT=""
 fi
