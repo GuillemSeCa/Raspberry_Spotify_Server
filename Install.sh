@@ -30,7 +30,7 @@ cd /usr/lib/gci-bin && sudo find . -type f -print0 | sudo  xargs -0 dos2unix
 #Instalem el mpg123
 sudo apt-get install mpg123
 
-touch $HOME/logs.txt
+touch $HOME/Desktop/logs.txt
 sudo chmod 755 /home/pi/Desktop/logs.txt
 sudo systemctl restart apache2
 
