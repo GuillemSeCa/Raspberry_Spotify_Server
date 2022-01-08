@@ -1,4 +1,11 @@
 #!/bin/bash
+#TODO: Mirar si ja esta sonant?
+#mpg321 /home/pi/Downloads/* -C
+
+sudo xdotool key space --pid 21244
+
+
+
 echo "Content-Type: text/html"
 echo ""
 echo -e "	<!DOCTYPE html><html>
