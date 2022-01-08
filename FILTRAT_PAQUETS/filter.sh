@@ -42,11 +42,14 @@ fi
 
 iptable="$(protT) $(srcT) $(destT) $(portT)"
 
+
+
 echo -e "	<h1>IPTABLE added</h1>
   <p>Protocol: $prot</p>
   <p>Source IP: $src</p>
   <p>Destiny IP: $dest</p>
   <p>Port: $port</p>
+  <p>$iptable</p>
     <form action="../webapp.sh">
 					<input type="submit" value="Return">
 		</form>"
