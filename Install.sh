@@ -27,6 +27,9 @@ echo 'www-data ALL=(ALL) NOPASSWD: ALL' | sudo EDITOR='tee -a' visudo
 sudo apt-get install dos2unix
 cd /usr/lib/cgi-bin && sudo find . -type f -print0 | sudo  xargs -0 dos2unix
 
+#Instalem les iptables
+sudo apt-get install iptables
+
 #Instalem el mpg123
 sudo apt-get install mpg123
 
