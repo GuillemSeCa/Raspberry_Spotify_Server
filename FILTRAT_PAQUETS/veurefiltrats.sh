@@ -2,7 +2,8 @@
 echo Content-Type: text/html
 echo
 
-echo "SYS_LOGS: S'ha apagat el sistema." >> /home/pi/Desktop/logs.txt
+aux=`echo "$(sudo iptables -S)"`
+echo "SYS_LOGS: S'han mostrat tots els filtrats del sistema." >> /home/pi/Desktop/logs.txt
 
 echo -e "
 <!DOCTYPE html><html>
@@ -195,15 +196,20 @@ echo -e "
 		<div class="container">
 			<div class="card">
 				<div class="center">
-					<h2 class="card-heading">Apagar el servidor</h2>
-				</div><div class="center">
-				<p>Apagant...</p>
-				</br>
+					<h2 class="card-heading">Veure tots els filtrats</h2>
+				</div><div class="center">"
+
+				while IFS="" read -r -a line;
+				do
+					echo "<p>$line</p>";
+				done <<< "$aux"
+
+echo -e "		</br>
 				</div>
 				<div class="card-info">
-					<p>Tornar al inici</p>
+					<p>Tornar a la gestió de filtrats</p>
 					<div class="action">
-						<form action="../index.sh">
+						<form action="filtratpaquets.sh">
 								<input class="action-button2" type="submit" value="Tornar">
 						</form>
 					</div>
@@ -212,5 +218,3 @@ echo -e "
 		</div>
 	</body>
 </html>"
-
-sudo shutdown now
