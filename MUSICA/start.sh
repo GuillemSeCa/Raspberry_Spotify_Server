@@ -2,8 +2,13 @@
 echo Content-Type: text/html
 echo
 
-echo "pause" > /home/pi/Downloads/pipe
-echo "SYS_LOGS: S'ha fet play/pause a la música." >> /home/pi/Desktop/logs.txt
+sudo pkill -9 -f mpg123
+sudo pkill -9 -f reproduir.sh
+nohup bash reproduir2.sh > /dev/null 2>&1 & disown
+sudo chmod 777 /home/pi/Downloads/pipe
+nohup bash reproduir.sh > /dev/null 2>&1 & disown
+
+echo "SYS_LOGS: S'ha començat a reproduir la llista de reproducció de la música." >> /home/pi/Desktop/logs.txt
 
 echo -e "
 <!DOCTYPE html><html>
@@ -196,12 +201,12 @@ echo -e "
 		<div class="container">
 			<div class="card">
 				<div class="center">
-					<h2 class="card-heading">Play / Pause</h2>
+					<h2 class="card-heading">Start</h2>
 				</div>
-				<div class="center">
-				<p>Play / Pause realitzat a la cançó.</p>
-				</div>
-				</br>
+
+                <div class="center"><p>S'ha començat a reproduir la llista de cançons.</p></div>
+
+                </br>
 
 				<div class="card-info">
 					<p>Tornar a música</p>

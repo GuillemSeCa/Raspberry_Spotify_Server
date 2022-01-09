@@ -1,3 +1,3 @@
 #!/bin/bash
-
-echo "Script B executed" >> /home/pi/output.log
+sudo pkill -9 -f mpg123
+sudo pkill -9 -f reproduir.sh

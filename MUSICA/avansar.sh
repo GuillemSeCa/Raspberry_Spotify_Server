@@ -2,8 +2,10 @@
 echo Content-Type: text/html
 echo
 
-echo "pause" > /home/pi/Downloads/pipe
-echo "SYS_LOGS: S'ha fet play/pause a la música." >> /home/pi/Desktop/logs.txt
+echo "SYS_LOGS: S'ha avançat una cançó de la llista de reproducció de la música." >> /home/pi/Desktop/logs.txt
+
+sudo pkill -9 -f reproduir.sh
+nohup bash reproduir.sh 1 > /dev/null 2>&1 & disown
 
 echo -e "
 <!DOCTYPE html><html>
@@ -196,10 +198,10 @@ echo -e "
 		<div class="container">
 			<div class="card">
 				<div class="center">
-					<h2 class="card-heading">Play / Pause</h2>
+					<h2 class="card-heading">Avançar cançó</h2>
 				</div>
 				<div class="center">
-				<p>Play / Pause realitzat a la cançó.</p>
+				<p>S'ha avançat una cançó de la llista de reproducció de la música</p>
 				</div>
 				</br>
 

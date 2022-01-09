@@ -1,4 +1,3 @@
 #!/bin/bash
-
-echo "Script A executed" >> /home/pi/output.log
-sh /usr/lib/cgi-bin/MUSICA/playpause.sh
+sudo pkill -9 -f reproduir.sh
+nohup bash /usr/lib/cgi-bin/MUSICA/reproduir.sh 1 1 > /dev/null 2>&1 & disown
