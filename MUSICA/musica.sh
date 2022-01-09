@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Content-Type: text/html"
 echo ""
+echo "load song1.mp3" > /home/pi/Downloads/pipe
 echo -e "	<!DOCTYPE html><html>
 			<head><meta http-equiv="Content-Type" content="text/html\; charset=UTF-8" /></head><body>
 			<h1>MÚSICA</h1>
