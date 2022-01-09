@@ -42,6 +42,10 @@ echo "1" > /home/pi/Downloads/currentsong.txt
 
 touch /home/pi/Downloads/llista.txt
 sudo chmod 777 /home/pi/Downloads/llista.txt
+echo "1 song1.mp3" > /home/pi/Downloads/llista.txt
+echo "2 song2.mp3" >> /home/pi/Downloads/llista.txt
+echo "3 song3.mp3" >> /home/pi/Downloads/llista.txt
+echo "4 song4.mp3" >> /home/pi/Downloads/llista.txt
 
 sudo systemctl restart apache2
 
