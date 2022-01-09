@@ -38,6 +38,7 @@ sudo chmod 777 /home/pi/Desktop/logs.txt
 
 touch /home/pi/Downloads/currentsong.txt
 sudo chmod 777 /home/pi/Downloads/currentsong.txt
+echo "1" > /home/pi/Downloads/currentsong.txt
 
 touch /home/pi/Downloads/llista.txt
 sudo chmod 777 /home/pi/Downloads/llista.txt
