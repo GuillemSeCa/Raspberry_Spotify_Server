@@ -3,9 +3,6 @@
 
 echo "pause" > /home/pi/Downloads/pipe
 
-
-
-
 echo "Content-Type: text/html"
 echo ""
 echo -e "	<!DOCTYPE html><html>
