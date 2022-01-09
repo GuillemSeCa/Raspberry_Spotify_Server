@@ -1,8 +1,8 @@
 #!/bin/bash
 #TODO: Mirar si ja esta sonant?
-#mpg321 /home/pi/Downloads/* -C
 
-sudo xdotool key space --pid 21244
+echo "pause" > /home/pi/Downloads/pipe
+
 
 
 
