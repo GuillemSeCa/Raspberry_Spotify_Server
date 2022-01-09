@@ -35,6 +35,14 @@ sudo apt-get install mpg123
 
 touch /home/pi/Desktop/logs.txt
 sudo chmod 777 /home/pi/Desktop/logs.txt
+
+touch /home/pi/Downloads/currentsong.txt
+sudo chmod 777 /home/pi/Downloads/currentsong.txt
+
+touch /home/pi/Downloads/llista.txt
+sudo chmod 777 /home/pi/Downloads/llista.txt
+
 sudo systemctl restart apache2
+
 
 
